@@ -9,5 +9,5 @@ transformers:
 - labels.yaml
 
 images:
-- name: wordpress:5-php7.4-apache
-  newTag: 5-php7.4-apache
+- name: wordpress
+  newTag: 5.7-php7.4-apache
