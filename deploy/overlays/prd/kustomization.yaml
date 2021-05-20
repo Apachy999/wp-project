@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: wordpress-prd
+nameSuffix: -prd
+resources:
+- ../../bases/wordpress
+- namespace.yaml
+transformers:
+- labels.yaml
+
+images:
+- name: wordpress:5-php7.4-apache
+  newTag: 5-php7.4-apache
