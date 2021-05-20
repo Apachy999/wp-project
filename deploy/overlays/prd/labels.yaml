@@ -1,0 +1,8 @@
+kind: LabelTransformer
+metadata:
+  name: labels
+labels:
+  env: prd
+fieldSpecs:
+  - path: metadata/labels
+    create: true
