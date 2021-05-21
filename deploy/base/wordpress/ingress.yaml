@@ -2,9 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-wp
-  annotations:
-    kubernetes.io/ingress.class: "nginx-external"
-    nginx.ingress.kubernetes.io/use-regex: "true"
+#  annotations:
+#    kubernetes.io/ingress.class: "nginx-external"
+#    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   defaultBackend:
     service:
