@@ -7,6 +7,13 @@ resources:
 - namespace.yaml
 transformers:
 - labels.yaml
+
+secretGenerator:
+  - name: mysql-pass
+    behavior: create
+	envs:
+	  - app.secret
+
 images:
 - name: wordpress
   newTag: 5-php7.4-apache
