@@ -11,3 +11,6 @@ transformers:
 images:
 - name: wordpress
   newTag: 5.7-php7.4-apache
+  
+patchesStrategicMerge:  
+- prd-ingress.yaml  
