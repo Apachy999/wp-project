@@ -9,11 +9,12 @@ transformers:
 - labels.yaml
 
 secretGenerator:
-  - name: mysql-pass-dev
-    behavior: create
-    envs:
-      - app.secret
-
+- name: mysql-pass-dev
+  behavior: create
+  envs:
+  - app.secret
+patchesStrategicMerge:
+- dev-ingress.yaml
 images:
 - name: wordpress
   newTag: 5-php7.4-apache
