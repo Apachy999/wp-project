@@ -9,7 +9,7 @@ transformers:
 - labels.yaml
 
 secretGenerator:
-  - name: mysql-pass
+  - name: mysql-pass-dev
     behavior: create
     envs:
       - app.secret
