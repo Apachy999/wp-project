@@ -10,10 +10,10 @@ transformers:
 patchesStrategicMerge:
 - prd-ingress.yaml
 secretGenerator:
-  - name: mysql-pass-prd
-    behavior: create
-    envs:
-      - app.secret
+- name: mysql-pass-prd
+  behavior: create
+  envs:
+  - app.secret
 images:
 - name: wordpress
   newTag: 5-php7.4-apache
