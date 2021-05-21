@@ -11,8 +11,8 @@ transformers:
 secretGenerator:
   - name: mysql-pass
     behavior: create
-	envs:
-	  - app.secret
+    envs:
+      - app.secret
 
 images:
 - name: wordpress
