@@ -7,14 +7,10 @@ metadata:
   name: prd-ingress
 spec:
   rules:
-  - host: prd.wp.k8s-5.sa
-    http:
-      paths:
-      - backend:
-          serviceName: wordpress
-          servicePort: 80
-        path: /
-  tls:
-  - hosts:
-    - prd.wp.k8s-5.sa
-    secretName: mysql-pass
+    - host: prd.wp.k8s-5.sa
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wordpress
+              servicePort: 80
