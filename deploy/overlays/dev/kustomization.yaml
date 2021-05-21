@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: wp-dev
 nameSuffix: -dev
 resources:
-- ../../bases/wordpress
+- ../../base/wordpress
 - namespace.yaml
 transformers:
 - labels.yaml
