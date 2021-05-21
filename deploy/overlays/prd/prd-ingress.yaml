@@ -1,0 +1,7 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-wp
+spec:
+  rules:
+    - host: prd.wp.k8s-5.sa
