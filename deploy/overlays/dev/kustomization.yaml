@@ -6,8 +6,6 @@ resources:
 - namespace.yaml
 transformers:
 - labels.yaml
-patchesStrategicMerge:
-- dev-ingress.yaml
 images:
 - name: wordpress
   newTag: 5-php7.4-apache
