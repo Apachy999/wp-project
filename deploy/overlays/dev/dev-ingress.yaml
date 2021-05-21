@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+  name: dev-ingress
+spec:
+  rules:
+  - host: dev.wp.k8s-5.sa
+    http:
+      paths:
+      - backend:
+          serviceName: wordpress
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - dev.wp.k8s-5.sa
+    secretName: mysql-pass
